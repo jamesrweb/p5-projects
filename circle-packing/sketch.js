@@ -1,3 +1,23 @@
+let circles = [];
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+  background(0);
+
+  generateCircles(10, 100).then(
+    circles => circles.forEach(circle => {
+      circle.show();
+      circle.grow();
+      const edg = circle.edges();
+      const ovr = overlapping(circle, circles);
+      circle.shouldGrow = !(edg || ovr);
+    })
+  );
+}
+
 class Circle {
   constructor(x, y, radius) {
     this.x = x;
@@ -30,8 +50,6 @@ class Circle {
     );
   }
 }
-
-let circles = [];
 
 function inside(circle, circles) {
   for (const other of circles) {
@@ -88,22 +106,4 @@ async function generateCircles(desiredCount, iterationLimit) {
   }
 
   return circles;
-}
-
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-}
-
-function draw() {
-  background(0);
-
-  generateCircles(10, 100).then(
-    circles => circles.forEach(circle => {
-      circle.show();
-      circle.grow();
-      const edg = circle.edges();
-      const ovr = overlapping(circle, circles);
-      circle.shouldGrow = !(edg || ovr);
-    })
-  );
 }
