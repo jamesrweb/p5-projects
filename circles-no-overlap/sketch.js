@@ -11,11 +11,13 @@ let circles = [];
 const circleCount = 1000;
 const breakOutAt = circleCount * 10;
 
-function colliding(circle, circles) {
+function overlapping(circle, circles) {
   for (const other of circles) {
-    const distance = dist(circle.x, circle.y, other.x, other.y);
-    const colliding = distance < circle.radius + other.radius;
-    if (colliding) return true;
+    if (circle !== other) {
+      const distance = dist(circle.x, circle.y, other.x, other.y);
+      const overlapping = distance < circle.radius + other.radius;
+      if (overlapping) return true;
+    }
   }
 
   return false;
@@ -30,7 +32,7 @@ function setup() {
       random(6, 36)
     );
 
-    if (colliding(circle, circles) === false) {
+    if (overlapping(circle, circles) === false) {
       circles = [...circles, circle];
     }
 
@@ -47,7 +49,7 @@ function draw() {
     ellipse(circle.x, circle.y, circle.radius * 2, circle.radius * 2);
   }
 
-  const fontSize = 72;
+  const fontSize = 48;
   const message = `Drew ${circles.length} circles`;
 
   fill(255);
