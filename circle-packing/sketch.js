@@ -70,10 +70,7 @@ function makeCircle() {
   return circle;
 }
 
-async function generateCircles(
-  desiredCount,
-  iterationLimit
-) {
+async function generateCircles(desiredCount, iterationLimit) {
   let count = 0;
   let iterations = 0;
 
@@ -100,13 +97,13 @@ function setup() {
 function draw() {
   background(0);
 
-  generateCircles(10, 100).then(circles => {
-    circles.forEach(circle => {
+  generateCircles(10, 100).then(
+    circles => circles.forEach(circle => {
       circle.show();
       circle.grow();
       const edg = circle.edges();
       const ovr = overlapping(circle, circles);
       circle.shouldGrow = !(edg || ovr);
-    });
-  });
+    })
+  );
 }
