@@ -59,7 +59,7 @@ let frog;
 function setup() {
   createCanvas(
     windowWidth - windowWidth % grid,
-    windowHeight - windowWidth % grid
+    windowHeight - windowHeight % grid
   );
   frog = new Frog(
     (width / 2) - (grid / 2),
