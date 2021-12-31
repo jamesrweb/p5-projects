@@ -10,9 +10,7 @@ class Character {
 
   setRandomCharacter() {
     if (frameCount % this.switchInterval === 0) {
-      this.value = String.fromCharCode(
-        0x30A0 + round(random(0, 96))
-      );
+      this.value = String.fromCharCode(0x30a0 + round(random(0, 96)));
     }
   }
 

@@ -22,7 +22,7 @@ function getRandomInt(min, max) {
 function drawSquareFractal(x, y, sideLength) {
   if (sideLength < 1) return;
   rectMode(CENTER);
-  stroke(getRandomInt(0, 255), getRandomInt(0, 255), getRandomInt(0, 255))
+  stroke(getRandomInt(0, 255), getRandomInt(0, 255), getRandomInt(0, 255));
   rect(x, y, sideLength, sideLength);
   const newSize = sideLength / 2;
   drawSquareFractal(x, y - newSize, newSize);

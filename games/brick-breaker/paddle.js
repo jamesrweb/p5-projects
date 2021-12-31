@@ -3,10 +3,7 @@ class Paddle {
     this.w = w;
     this.h = h;
     this.direction = 0;
-    this.pos = createVector(
-      (width / 2) - (this.w / 2),
-      height - (this.h * 2)
-    );
+    this.pos = createVector(width / 2 - this.w / 2, height - this.h * 2);
   }
 
   checkEdges() {

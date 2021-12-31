@@ -55,7 +55,8 @@ function Vehicle(x, y, r) {
     seek(target) {
       const desired = p5.Vector.sub(target, position);
       const distance = desired.mag();
-      const speed = distance < 100 ? map(distance, 0, 100, 0, max_speed) : max_speed;
+      const speed =
+        distance < 100 ? map(distance, 0, 100, 0, max_speed) : max_speed;
       desired.setMag(speed);
       const heading = p5.Vector.sub(desired, velocity);
       heading.limit(max_force);
@@ -80,5 +81,5 @@ function Vehicle(x, y, r) {
       strokeWeight(r);
       point(position.x, position.y);
     }
-  }
+  };
 }

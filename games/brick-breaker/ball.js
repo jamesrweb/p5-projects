@@ -24,7 +24,9 @@ class Ball {
     const isHorizontallyAligned = this.pos.x > paddle.pos.x - this.r;
     const isTouchingY = this.pos.y > paddle.pos.y - this.r;
     const isTouchingX = this.pos.x < paddle.pos.x + paddle.w + this.r;
-    return isVerticallyAligned && isHorizontallyAligned && isTouchingY && isTouchingX;
+    return (
+      isVerticallyAligned && isHorizontallyAligned && isTouchingY && isTouchingX
+    );
   }
 
   hits(brick) {

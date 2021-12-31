@@ -11,11 +11,10 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
   const p0 = new Particle(0, height / 2);
-  const p1 = new Particle(width / 2, height - (height * 0.25));
-  const p2 = new Particle(width - (width * 0.15), 0);
+  const p1 = new Particle(width / 2, height - height * 0.25);
+  const p2 = new Particle(width - width * 0.15, 0);
   const p3 = new Particle(width / 3, height / 4);
   const p4 = new Particle(width, height / 2);
-
 
   linear_colour = random(0, 360) % 360;
   linear_bezier = LinearBezier.createFromPoints([p0, p4]);

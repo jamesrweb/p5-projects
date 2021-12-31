@@ -72,8 +72,10 @@ function insertChoice(x, y) {
     for (const [_, column] of row.entries()) {
       if (column.value) continue;
 
-      const withinX = x < column.x + column.w / 2 && x > column.x - column.w / 2;
-      const withinY = y < column.y + column.h / 2 && y > column.y - column.h / 2;
+      const withinX =
+        x < column.x + column.w / 2 && x > column.x - column.w / 2;
+      const withinY =
+        y < column.y + column.h / 2 && y > column.y - column.h / 2;
       if (withinX && withinY) {
         column.value = currentPlayer;
         currentPlayer = players.filter(p => p !== currentPlayer)[0];

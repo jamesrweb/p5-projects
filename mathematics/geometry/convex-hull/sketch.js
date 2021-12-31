@@ -66,33 +66,17 @@ function draw() {
   // draw a line between the current vertex and the guessed next vertex
   stroke(0, 255, 0);
   strokeWeight(2);
-  line(
-    currentVertex.x,
-    currentVertex.y,
-    nextVertex.x,
-    nextVertex.y
-  );
+  line(currentVertex.x, currentVertex.y, nextVertex.x, nextVertex.y);
 
   // draw a line between the current vertex and the item we are currently checking to validate our guessed next vertex against
   let checking = points[index];
   stroke(255);
   strokeWeight(2);
-  line(
-    currentVertex.x,
-    currentVertex.y,
-    checking.x,
-    checking.y
-  );
+  line(currentVertex.x, currentVertex.y, checking.x, checking.y);
 
   // @see: https://en.wikipedia.org/wiki/Cross_product
-  const a = p5.Vector.sub(
-    nextVertex,
-    currentVertex
-  );
-  const b = p5.Vector.sub(
-    checking,
-    currentVertex
-  );
+  const a = p5.Vector.sub(nextVertex, currentVertex);
+  const b = p5.Vector.sub(checking, currentVertex);
   const cross = a.cross(b);
 
   if (cross.z < 0) {

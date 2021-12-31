@@ -56,9 +56,7 @@ function computeNextGeneration(grid) {
   for (let outer = 0; outer < columns; outer++) {
     for (let inner = 0; inner < rows; inner++) {
       const state = grid[outer][inner];
-      const neighbours = countCellNeighbours(
-        grid, createVector(outer, inner)
-      );
+      const neighbours = countCellNeighbours(grid, createVector(outer, inner));
 
       if (state === 0 && neighbours === 3) {
         next_generation[outer][inner] = 1;

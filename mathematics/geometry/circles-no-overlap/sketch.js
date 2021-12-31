@@ -26,11 +26,7 @@ function overlapping(circle, circles) {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   while (circles.length < circleCount) {
-    const circle = new Circle(
-      random(width),
-      random(height),
-      random(6, 36)
-    );
+    const circle = new Circle(random(width), random(height), random(6, 36));
 
     if (overlapping(circle, circles) === false) {
       circles = [...circles, circle];
@@ -56,7 +52,7 @@ function draw() {
   stroke(0);
   strokeWeight(2);
   rectMode(CENTER);
-  rect(width / 2, height / 2, fontSize * message.length / 2, fontSize * 2);
+  rect(width / 2, height / 2, (fontSize * message.length) / 2, fontSize * 2);
 
   fill(0);
   noStroke();

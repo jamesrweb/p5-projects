@@ -8,7 +8,7 @@ class Car extends Rectangle {
     this.x += this.speed;
 
     if (this.speed > 0 && this.x > width + grid) {
-      this.x = - this.width - grid;
+      this.x = -this.width - grid;
     } else if (this.speed < 0 && this.x < -this.width - grid) {
       this.x = width + grid;
     }

@@ -27,8 +27,8 @@ function draw() {
   for (let column = 0; column < columns; column++) {
     for (let row = 0; row < rows; row++) {
       const base = { column, row, marker_radius };
-      const columnX = (column * column_width) + column_width / 2;
-      const columnY = (row * column_width) + column_width / 2;
+      const columnX = column * column_width + column_width / 2;
+      const columnY = row * column_width + column_width / 2;
 
       addColumn({ ...base, cx: column_width + columnX, cy: column_width / 2 });
       addRow({ ...base, cx: column_width / 2, cy: column_width + columnY });

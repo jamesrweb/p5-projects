@@ -31,12 +31,7 @@ function draw() {
   strokeWeight(4);
   stroke(0, 255, 0);
   rectMode(CENTER);
-  const range = new Rectangle(
-    mouseX,
-    mouseY,
-    width / 10,
-    height / 10
-  );
+  const range = new Rectangle(mouseX, mouseY, width / 10, height / 10);
   if (mouseX < width && mouseY < height) {
     rect(range.x, range.y, range.w * 2, range.h * 2);
     let points = quadtree.query(range);

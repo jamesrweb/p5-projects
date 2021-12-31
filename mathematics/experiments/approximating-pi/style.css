@@ -27,15 +27,17 @@ table {
   border: 1px solid #ddd;
 }
 
-th, td {
+th,
+td {
   text-align: center;
   padding: 16px;
 }
 
-th:first-child, td:first-child {
+th:first-child,
+td:first-child {
   text-align: left;
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2
+  background-color: #f2f2f2;
 }

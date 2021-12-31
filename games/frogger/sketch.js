@@ -4,13 +4,13 @@ const cars = [];
 const logs = [];
 
 function createFrog() {
-  return new Frog((width / 2) - (grid / 2), height - grid, grid);
+  return new Frog(width / 2 - grid / 2, height - grid, grid);
 }
 
 function reset() {
   frog = createFrog();
   frog.attach(null);
-  console.log(frog)
+  console.log(frog);
 }
 
 function buildRows() {
@@ -70,9 +70,9 @@ function draw() {
   background(0);
   fill(215, 100);
   rect(0, 0, width, grid * 2);
-  fill("green")
+  fill("green");
   rect(0, height - grid * 5, width, grid);
-  fill("red")
+  fill("red");
   rect(0, height - grid, width, grid);
 
   for (const car of cars) {
@@ -104,7 +104,7 @@ function draw() {
   frog.show();
 
   if (frog.y < grid * 2) {
-    console.log("Game completed!")
+    console.log("Game completed!");
     noLoop();
   }
 }

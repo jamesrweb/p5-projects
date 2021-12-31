@@ -23,7 +23,9 @@ function draw() {
   const HOUR = hour();
   const MINUTE = minute();
   const SECOND = second();
-  const TIME_TEXT = `${normalise(HOUR)}:${normalise(MINUTE)}:${normalise(SECOND)}`;
+  const TIME_TEXT = `${normalise(HOUR)}:${normalise(MINUTE)}:${normalise(
+    SECOND
+  )}`;
   const CENTERX = width / 2;
   const CENTERY = height / 2;
 

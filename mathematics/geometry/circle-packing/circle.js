@@ -22,11 +22,6 @@ class Circle {
     stroke(255);
     strokeWeight(1);
     noFill();
-    ellipse(
-      this.x,
-      this.y,
-      this.radius * 2,
-      this.radius * 2
-    );
+    ellipse(this.x, this.y, this.radius * 2, this.radius * 2);
   }
 }

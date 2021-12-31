@@ -1,0 +1,23 @@
+{
+  "name": "p5-projects",
+  "version": "1.0.0",
+  "description": "Creative coding projects written with the p5.js library",
+  "main": "prettier.config.js",
+  "scripts": {
+    "format": "prettier . --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesrweb/p5-projects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesrweb/p5-projects/issues"
+  },
+  "homepage": "https://github.com/jamesrweb/p5-projects#readme",
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  }
+}

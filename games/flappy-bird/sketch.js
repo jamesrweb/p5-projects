@@ -6,7 +6,7 @@ const pipes = [];
 const passed = new Set();
 
 function preload() {
-  background_image = loadImage('sky.jpg');
+  background_image = loadImage("sky.jpg");
 }
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -31,7 +31,7 @@ function draw() {
 
     if (pipe.hasPassed(bird) && !passed.has(pipe)) {
       passed.add(pipe);
-      setTimeout(() => points++, 100)
+      setTimeout(() => points++, 100);
     }
 
     if (pipe.isOffscreen()) {
@@ -61,7 +61,7 @@ function displayStats() {
   stroke(0);
   strokeWeight(2);
   rectMode(CENTER);
-  rect(width / 2, height / 2, fontSize * message.length / 2, fontSize * 6);
+  rect(width / 2, height / 2, (fontSize * message.length) / 2, fontSize * 6);
 
   fill(0);
   noStroke();

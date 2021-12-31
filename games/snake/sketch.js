@@ -2,7 +2,6 @@ let snake = null;
 let food = null;
 const scale = 20;
 
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(10);

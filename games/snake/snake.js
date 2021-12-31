@@ -33,7 +33,9 @@ class Snake {
         textSize(64);
         textAlign(CENTER, CENTER);
         text(
-          `Game over\nYou scored ${this.total} ${this.total === 1 ? "point" : "points"}`,
+          `Game over\nYou scored ${this.total} ${
+            this.total === 1 ? "point" : "points"
+          }`,
           width / 2,
           height / 2
         );

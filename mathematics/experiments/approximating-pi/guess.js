@@ -17,10 +17,7 @@ function guessPI(number) {
     // if it was greater than 1 we wouldn't be inside the circle
     if (distance <= 1) in_circle_count++;
     // draw the point to the canvas
-    point(
-      map(x, 0, 1, 10, width - 10),
-      map(y, 0, 1, -10, -height + 10)
-    );
+    point(map(x, 0, 1, 10, width - 10), map(y, 0, 1, -10, -height + 10));
   }
 
   // Area of the circle = PI * r ** 2
@@ -29,7 +26,7 @@ function guessPI(number) {
   // Since the r ** 2 parts cancel eachother out
   // We can from this calculate PI to be 4 * the ratio of in circle vs in square
   // 4 * in circle / in square will thus be roughly equivalent to PI
-  const guess = 4 * in_circle_count / in_square_count;
+  const guess = (4 * in_circle_count) / in_square_count;
 
   // cache the guess information for outputting later
   guesses[number] = {};
@@ -55,11 +52,7 @@ function outputGuesses() {
 
   for (const number of Object.keys(guesses)) {
     const { elt: tableRow } = createElement("tr");
-    const {
-      in_circle_count,
-      in_square_count,
-      guess
-    } = guesses[number];
+    const { in_circle_count, in_square_count, guess } = guesses[number];
 
     const { elt: numberCell } = createElement("td");
     numberCell.textContent = number;

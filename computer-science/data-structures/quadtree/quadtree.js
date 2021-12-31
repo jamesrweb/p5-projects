@@ -93,7 +93,7 @@ class QuadTree {
       this.northwest.insert(entity) ||
       this.southeast.insert(entity) ||
       this.southwest.insert(entity)
-    )
+    );
   }
 
   query(area, found = []) {
@@ -120,7 +120,6 @@ class QuadTree {
   all() {
     return this.query(this.boundary);
   }
-
 
   show() {
     stroke(255);

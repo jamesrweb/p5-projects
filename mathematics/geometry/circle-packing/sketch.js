@@ -18,10 +18,7 @@ async function draw() {
 
 function inside(circle, circles) {
   for (const other of circles) {
-    const distance = dist(
-      circle.x, circle.y,
-      other.x, other.y
-    );
+    const distance = dist(circle.x, circle.y, other.x, other.y);
 
     if (distance < other.radius) return true;
   }

@@ -7,9 +7,7 @@ class Orbit {
     this.parent = parent;
     this.child = null;
     this.angle = -HALF_PI;
-    this.speed = radians(
-      pow(kinetic_force, nth_child - 1)
-    ) / resolution;
+    this.speed = radians(pow(kinetic_force, nth_child - 1)) / resolution;
   }
 
   addChild() {

@@ -15,7 +15,7 @@ class Pipe {
     } else if (this.passed) {
       fill(67, 176, 71);
     } else {
-      fill(0, 0, 50)
+      fill(0, 0, 50);
     }
     rect(this.x, 0, this.w, this.top, 0, 0, 25, 25);
     rect(this.x, height - this.bottom, this.w, this.bottom, 25, 25, 0, 0);
@@ -32,7 +32,8 @@ class Pipe {
 
   isColliding(bird) {
     const collidingY = bird.y < this.top || bird.y > height - this.bottom;
-    const collidingX = bird.x > this.x - this.w / 2 && bird.x < this.x + this.w / 2;
+    const collidingX =
+      bird.x > this.x - this.w / 2 && bird.x < this.x + this.w / 2;
     this.collided = collidingY && collidingX;
     return this.collided;
   }

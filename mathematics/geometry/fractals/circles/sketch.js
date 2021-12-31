@@ -21,7 +21,7 @@ function getRandomInt(min, max) {
 
 function drawCircleFractal(x, y, diameter) {
   if (diameter < 1) return;
-  stroke(getRandomInt(0, 255), getRandomInt(0, 255), getRandomInt(0, 255))
+  stroke(getRandomInt(0, 255), getRandomInt(0, 255), getRandomInt(0, 255));
   circle(x, y, diameter);
   const newSize = diameter / 2;
   drawCircleFractal(x - newSize, y, newSize);
