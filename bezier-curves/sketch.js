@@ -8,7 +8,7 @@ let cubic_colour;
 let quartic_colour;
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
 
   const p0 = new Particle(0, height / 2);
   const p1 = new Particle(width / 2, height - (height * 0.25));
