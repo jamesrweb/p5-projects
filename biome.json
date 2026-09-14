@@ -7,16 +7,16 @@
     "defaultBranch": "main"
   },
   "files": {
-    "includes": ["**", "!**/mp3/**", "!**/*.ttf", "!**/*.jpg"]
+    "includes": ["**", "!**/mp3", "!**/*.ttf", "!**/*.jpg"]
   },
   "formatter": {
     "indentStyle": "space",
     "indentWidth": 2
   },
   "html": {
+    "experimentalFullSupportEnabled": true,
     "formatter": {
-      "enabled": true,
-      "fullSupport": true
+      "enabled": true
     }
   }
 }
