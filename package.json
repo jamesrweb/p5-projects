@@ -11,7 +11,11 @@
     "url": "git+https://github.com/jamesrweb/p5-projects.git"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "James Robb",
+    "url": "https://github.com/jamesrweb",
+    "email": "47126579+jamesrweb@users.noreply.github.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jamesrweb/p5-projects/issues"
