@@ -33,7 +33,7 @@ function julia(x, y, angle) {
     a: map(x, 0, width, -range, range),
     b: map(y, 0, height, -range, range),
     ca: cos(angle),
-    cb: sin(angle)
+    cb: sin(angle),
   };
 
   while (n < max_iterations) {

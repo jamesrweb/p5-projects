@@ -1,5 +1,5 @@
 function create_range(start, end, step) {
-  let range = [];
+  const range = [];
 
   for (let current = start; current <= end; current += step) {
     range.push(current);
@@ -64,14 +64,10 @@ class Bezier {
 }
 
 class LinearBezier extends Bezier {
-  constructor(points) {
-    super(points);
-  }
-
   static createFromPoints(points) {
     if (points.length !== 2) {
       throw new Error(
-        "A linear bezier curve can only be constructed from 2 points."
+        "A linear bezier curve can only be constructed from 2 points.",
       );
     }
 
@@ -83,7 +79,7 @@ class LinearBezier extends Bezier {
 
         return points.concat(point);
       },
-      []
+      [],
     );
 
     return new LinearBezier(linear_bezier_points);
@@ -91,14 +87,10 @@ class LinearBezier extends Bezier {
 }
 
 class QuadraticBezier extends Bezier {
-  constructor(points) {
-    super(points);
-  }
-
   static createFromPoints(points) {
     if (points.length !== 3) {
       throw new Error(
-        "A quadratic bezier curve can only be constructed from 3 points."
+        "A quadratic bezier curve can only be constructed from 3 points.",
       );
     }
 
@@ -111,7 +103,7 @@ class QuadraticBezier extends Bezier {
 
         return points.concat(point);
       },
-      []
+      [],
     );
 
     return new QuadraticBezier(quadratic_bezier_points);
@@ -119,14 +111,10 @@ class QuadraticBezier extends Bezier {
 }
 
 class CubicBezier extends Bezier {
-  constructor(points) {
-    super(points);
-  }
-
   static createFromPoints(points) {
     if (points.length !== 4) {
       throw new Error(
-        "A cubic bezier curve can only be constructed from 4 points."
+        "A cubic bezier curve can only be constructed from 4 points.",
       );
     }
 
@@ -146,14 +134,10 @@ class CubicBezier extends Bezier {
 }
 
 class QuarticBezier extends Bezier {
-  constructor(points) {
-    super(points);
-  }
-
   static createFromPoints(points) {
     if (points.length !== 5) {
       throw new Error(
-        "A quartic bezier curve can only be constructed from 5 points."
+        "A quartic bezier curve can only be constructed from 5 points.",
       );
     }
 
@@ -169,7 +153,7 @@ class QuarticBezier extends Bezier {
 
         return points.concat(point);
       },
-      []
+      [],
     );
 
     return new QuarticBezier(quartic_bezier_points);

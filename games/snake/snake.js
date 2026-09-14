@@ -37,7 +37,7 @@ class Snake {
             this.total === 1 ? "point" : "points"
           }`,
           width / 2,
-          height / 2
+          height / 2,
         );
       }
     }

@@ -1,14 +1,14 @@
 let sun = null;
-let end = null;
+let _end = null;
 let path = [];
-const kinetic_force = -7;
+const _kinetic_force = -7;
 const child_count = 4;
-const resolution = 20;
+const _resolution = 20;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   sun = new Orbit(width / 2, height / 2, width / 4, 0);
-  end = setOrbitalChildren(sun, child_count);
+  _end = setOrbitalChildren(sun, child_count);
 }
 
 function draw() {

@@ -22,10 +22,6 @@ class Circle extends Area {
 }
 
 class Rectangle extends Area {
-  constructor(x, y, w, h) {
-    super(x, y, w, h);
-  }
-
   contains(entity) {
     const inLeft = entity.x >= this.x - this.w;
     const inRight = entity.x < this.x + this.w;
@@ -59,19 +55,19 @@ class QuadTree {
     const bottom = y + h / 2;
     this.northeast = new QuadTree(
       new this.boundary.constructor(right, top, w / 2, h / 2),
-      this.capacity
+      this.capacity,
     );
     this.northwest = new QuadTree(
       new this.boundary.constructor(left, top, w / 2, h / 2),
-      this.capacity
+      this.capacity,
     );
     this.southeast = new QuadTree(
       new this.boundary.constructor(right, bottom, w / 2, h / 2),
-      this.capacity
+      this.capacity,
     );
     this.southwest = new QuadTree(
       new this.boundary.constructor(left, bottom, w / 2, h / 2),
-      this.capacity
+      this.capacity,
     );
     this.divided = true;
   }
@@ -101,7 +97,7 @@ class QuadTree {
       return;
     }
 
-    for (let entity of this.entities) {
+    for (const entity of this.entities) {
       if (area.contains(entity)) {
         found.push(entity);
       }
@@ -130,10 +126,10 @@ class QuadTree {
       this.boundary.x,
       this.boundary.y,
       this.boundary.w * 2,
-      this.boundary.h * 2
+      this.boundary.h * 2,
     );
 
-    for (let entity of this.entities) {
+    for (const entity of this.entities) {
       strokeWeight(2);
       point(entity.x, entity.y);
     }

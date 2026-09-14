@@ -17,7 +17,7 @@ class Orbit {
       this.y,
       newr,
       this.nth_child + 1,
-      this
+      this,
     );
     return this.child;
   }
@@ -40,7 +40,7 @@ class Orbit {
   }
 }
 
-function setOrbitalChildren(origin, child_count) {
+function _setOrbitalChildren(origin, child_count) {
   let last = origin;
 
   for (let i = 0; i < child_count; i++) {
@@ -50,8 +50,8 @@ function setOrbitalChildren(origin, child_count) {
   return last;
 }
 
-function buildOrbitalPath(origin) {
-  let path = [];
+function _buildOrbitalPath(origin) {
+  const path = [];
 
   for (let i = 0; i < resolution; i++) {
     let next = origin;
@@ -67,7 +67,7 @@ function buildOrbitalPath(origin) {
   return path;
 }
 
-function drawOrbitalPath(origin) {
+function _drawOrbitalPath(origin) {
   let next = origin;
   while (next !== null) {
     next.show();

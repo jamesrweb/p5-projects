@@ -1,4 +1,4 @@
-let circles = [];
+const circles = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -7,7 +7,7 @@ function setup() {
 async function draw() {
   background(0);
   const updated = await generateCircles(10, 100);
-  updated.forEach(circle => {
+  updated.forEach((circle) => {
     circle.show();
     circle.grow();
     const edg = circle.edges();

@@ -6,7 +6,7 @@
 
 let button = null;
 let angle = null;
-let axiom = "F";
+const axiom = "F";
 let sentence = axiom;
 let line_length = 75;
 const TEXT_SIZE = 32;
@@ -35,7 +35,7 @@ function turtle(sentence) {
   resetMatrix();
   translate(width / 2.5, height);
 
-  for (const [index, value] of [...sentence].entries()) {
+  for (const [_index, value] of [...sentence].entries()) {
     if (value === "F") {
       line(0, 0, 0, -line_length);
       translate(0, -line_length);
@@ -54,7 +54,7 @@ function turtle(sentence) {
 function generate(sentence) {
   let output = "";
 
-  for (const [index, value] of [...sentence].entries()) {
+  for (const [_index, value] of [...sentence].entries()) {
     if (RULES[value]) {
       output += RULES[value];
     } else {
@@ -80,8 +80,8 @@ function repositionButton(button) {
 
   if (BUTTON_WIDTH && BUTTON_HEIGHT) {
     button.position(
-      parseInt(BUTTON_WIDTH[0]) / 4,
-      height - parseInt(BUTTON_HEIGHT[0]) * 1.5
+      parseInt(BUTTON_WIDTH[0], 10) / 4,
+      height - parseInt(BUTTON_HEIGHT[0], 10) * 1.5,
     );
   }
 }

@@ -14,5 +14,7 @@ function setup() {
 
 function draw() {
   background(0, 150);
-  streams.forEach(stream => stream.show());
+  streams.forEach((stream) => {
+    stream.show();
+  });
 }

@@ -80,6 +80,6 @@ function Vehicle(x, y, r) {
       stroke(255);
       strokeWeight(r);
       point(position.x, position.y);
-    }
+    },
   };
 }

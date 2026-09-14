@@ -17,7 +17,7 @@ class Stream {
   }
 
   show() {
-    this.characters.forEach(character => {
+    this.characters.forEach((character) => {
       character.update();
       character.show();
     });

@@ -3,7 +3,7 @@ let start = null;
 let currentVertex = null;
 let nextVertex = null;
 let points = [];
-let hull = [];
+const hull = [];
 const buffer = 30;
 const total = 500;
 
@@ -42,13 +42,15 @@ function draw() {
   // draw all points
   stroke(255);
   strokeWeight(8);
-  points.forEach(p => point(p.x, p.y));
+  points.forEach((p) => {
+    point(p.x, p.y);
+  });
 
   // draw the convex hull
   stroke(0, 0, 255);
   fill(0, 0, 255, 50);
   beginShape();
-  hull.forEach(p => {
+  hull.forEach((p) => {
     vertex(p.x, p.y);
   });
   endShape(CLOSE);
@@ -69,7 +71,7 @@ function draw() {
   line(currentVertex.x, currentVertex.y, nextVertex.x, nextVertex.y);
 
   // draw a line between the current vertex and the item we are currently checking to validate our guessed next vertex against
-  let checking = points[index];
+  const checking = points[index];
   stroke(255);
   strokeWeight(2);
   line(currentVertex.x, currentVertex.y, checking.x, checking.y);

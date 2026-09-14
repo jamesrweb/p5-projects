@@ -11,7 +11,7 @@ function setup() {
   cx = width / 2;
   cy = height / 2;
 
-  for (var index = 0; index < nCirclePoints; index++) {
+  for (let index = 0; index < nCirclePoints; index++) {
     const angle = map(index, 0, nCirclePoints, 0, TWO_PI) - HALF_PI;
     const x = cx + radius * cos(angle);
     const y = cy + radius * sin(angle);

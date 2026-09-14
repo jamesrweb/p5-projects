@@ -35,7 +35,7 @@ class FrequencyGraph {
         border_radius,
         border_radius,
         border_radius,
-        border_radius
+        border_radius,
       );
     }
   }

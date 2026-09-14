@@ -24,7 +24,7 @@ function draw() {
   const MINUTE = minute();
   const SECOND = second();
   const TIME_TEXT = `${normalise(HOUR)}:${normalise(MINUTE)}:${normalise(
-    SECOND
+    SECOND,
   )}`;
   const CENTERX = width / 2;
   const CENTERY = height / 2;
@@ -38,15 +38,15 @@ function draw() {
   strokeWeight(4);
   noFill();
 
-  let hd = map(HOUR % 12, 0, 12, 0, TWO_PI);
+  const hd = map(HOUR % 12, 0, 12, 0, TWO_PI);
   stroke(HOURS_COLOUR);
   arc(CENTERX, CENTERY, 300, 300, 0, hd);
 
-  let md = map(MINUTE, 0, 60, 0, TWO_PI);
+  const md = map(MINUTE, 0, 60, 0, TWO_PI);
   stroke(MINUTES_COLOUR);
   arc(CENTERX, CENTERY, 275, 275, 0, md);
 
-  let sd = map(SECOND, 0, 60, 0, TWO_PI);
+  const sd = map(SECOND, 0, 60, 0, TWO_PI);
   stroke(SECONDS_COLOUR);
   arc(CENTERX, CENTERY, 250, 250, 0, sd);
 }

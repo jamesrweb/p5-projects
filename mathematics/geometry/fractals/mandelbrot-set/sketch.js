@@ -26,7 +26,7 @@ function mandelbrot(x, y) {
     a: map(x, 0, width, -range, range),
     b: map(y, 0, height, -range, range),
     ca: map(x, 0, width, -range, range),
-    cb: map(y, 0, height, -range, range)
+    cb: map(y, 0, height, -range, range),
   };
 
   while (n < max_iterations) {

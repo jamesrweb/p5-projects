@@ -28,7 +28,7 @@ class Grid {
 
     point(
       x * this.column_padding + this.column_padding / 2,
-      y * this.row_padding + this.row_padding / 2
+      y * this.row_padding + this.row_padding / 2,
     );
 
     this.positions[y][x] = true;

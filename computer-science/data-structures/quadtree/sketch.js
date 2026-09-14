@@ -5,7 +5,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   quadtree = new QuadTree(
     new Rectangle(width / 2, height / 2, width / 2, height / 2),
-    4
+    4,
   );
 
   for (let i = 0; i < 1000; i++) {
@@ -34,8 +34,8 @@ function draw() {
   const range = new Rectangle(mouseX, mouseY, width / 10, height / 10);
   if (mouseX < width && mouseY < height) {
     rect(range.x, range.y, range.w * 2, range.h * 2);
-    let points = quadtree.query(range);
-    for (let p of points) {
+    const points = quadtree.query(range);
+    for (const p of points) {
       point(p.x, p.y);
     }
   }

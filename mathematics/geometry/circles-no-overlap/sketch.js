@@ -39,7 +39,7 @@ function setup() {
 }
 
 function draw() {
-  for (let circle of circles) {
+  for (const circle of circles) {
     fill(255, 218, 0);
     noStroke();
     ellipse(circle.x, circle.y, circle.radius * 2, circle.radius * 2);

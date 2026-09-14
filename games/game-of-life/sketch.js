@@ -1,7 +1,7 @@
 let grid = null;
 let rows = null;
 let columns = null;
-let resolution = 10;
+const resolution = 10;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);

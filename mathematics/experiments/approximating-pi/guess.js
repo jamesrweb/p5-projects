@@ -1,8 +1,8 @@
 const guesses = {};
 
-function guessPI(number) {
+function _guessPI(number) {
   let in_circle_count = 0;
-  let in_square_count = number;
+  const in_square_count = number;
 
   // we will draw a red point with a width and height of 10px
   stroke(181, 0, 24);
@@ -38,7 +38,7 @@ function guessPI(number) {
   return guess;
 }
 
-function outputGuesses() {
+function _outputGuesses() {
   const { elt: table } = createElement("table");
   const { elt: headingRow } = createElement("tr");
   const headings = ["Number", "Guess", "In circle count", "In square count"];

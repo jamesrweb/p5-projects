@@ -4,7 +4,7 @@ class Brick {
     this.vs = vs;
     this.pos = createVector(
       random(100 + this.r, width - 100 - this.r),
-      random(100 + this.r, height - 100 - this.r)
+      random(100 + this.r, height - 100 - this.r),
     );
   }
 

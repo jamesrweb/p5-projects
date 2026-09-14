@@ -1,4 +1,4 @@
-function Board(rows, columns) {
+function Board(_rows, columns) {
   const board = [];
   for (let outer = 0; outer < columns; outer++) {
     const row = [];
@@ -8,7 +8,7 @@ function Board(rows, columns) {
         x: null,
         y: null,
         w: null,
-        h: null
+        h: null,
       });
     }
     board.push(row);
@@ -78,7 +78,7 @@ function insertChoice(x, y) {
         y < column.y + column.h / 2 && y > column.y - column.h / 2;
       if (withinX && withinY) {
         column.value = currentPlayer;
-        currentPlayer = players.filter(p => p !== currentPlayer)[0];
+        currentPlayer = players.filter((p) => p !== currentPlayer)[0];
         break;
       }
     }

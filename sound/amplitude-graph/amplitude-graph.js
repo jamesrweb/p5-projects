@@ -26,7 +26,7 @@ class AmplitudeGraph {
     strokeWeight(15);
     point(
       this.history.length,
-      map(this.history[this.history.length - 1], 0, 1, height / 2, 0)
+      map(this.history[this.history.length - 1], 0, 1, height / 2, 0),
     );
   }
 }
