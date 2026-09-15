@@ -66,9 +66,12 @@ not `behavior`, `licence` not `license`, `centre` not `center`).
 - **Biome** (`@biomejs/biome@^2.5.13`) formats and lints all JavaScript, HTML,
   and CSS (`biome.json`, schema 2.5.13, `html.experimentalFullSupportEnabled`).
   Biome is the sole tool — never introduce Prettier or ESLint
-- **sketch.js override:** `noUnusedVariables` is disabled for `**/sketch.js`
-  via an `overrides` block — p5 lifecycle functions are the known reason. Do
-  not "fix" unused-parameter warnings by renaming lifecycle functions
+- **noUnusedVariables override:** disabled for all `**/*.js` via an
+  `overrides` block. These are global-mode p5 projects — helper files are
+  loaded via `<script>` tags and their classes are used cross-file by
+  `sketch.js`, which per-file lint analysis cannot see. Do not "fix"
+  unused-variable warnings by renaming lifecycle functions or removing
+  "unused" helper classes
 - **Binary assets:** `mp3`, `ttf`, and `jpg` files are excluded from Biome in
   `files.includes`
 
@@ -226,5 +229,5 @@ visualisations, and computer-science visualisations.
 
 ## Future Topics
 
-- **Unused helper classes:** a handful of helper classes across projects are
-  flagged as unused — candidates for cleanup or activation
+- **p5.js CDN version:** sketches load p5.js 0.10.2 from cdnjs — a version
+  upgrade across all projects is a larger coordinated change
