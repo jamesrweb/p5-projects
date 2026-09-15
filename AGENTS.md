@@ -20,6 +20,9 @@
 7. **Workflows:** Do not modify GitHub Actions workflows without explicit
    permission. If a CI fix is needed, propose the change and wait for approval.
 
+8. **No local publishing:** This repository has no release pipeline — never
+   publish packages or create releases locally.
+
 ## Project Standards
 
 ### Authority
